@@ -1,0 +1,28 @@
+An environment setup for raspberry pi rev-B
+- rootfs: buildroot
+- kernel: linux or linux buildroot
+- bootloader: uboot (optional)
+
+Setup environment
+- source setenv.sh
+
+# Init development environment
+- source setenv.sh
+- cd build 
+
+# Kernel build
+- make kernel-config
+- make kernel
+
+# Buildroot build
+- make br-config
+- make br
+- make br-mmc 
+
+# Uboot build
+- make uboot-config
+- make uboot
+- make uboot-mmc-scr
+
+Output
+- stored in build/output

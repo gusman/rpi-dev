@@ -1,0 +1,19 @@
+#! /bin/sh
+
+
+case "$1" in
+    start)
+	echo "Loading 8192cu driver"
+	modprobe 8192cu
+	;;
+    stop)
+	echo "No need to unload 8192cu driver :D"
+	;;
+    *)
+	echo "Usage: $N {start|stop}"
+	exit 1
+	;;
+esac
+
+exit 0
+    

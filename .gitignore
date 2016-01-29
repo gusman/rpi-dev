@@ -1,0 +1,14 @@
+# Below is ignored by git
+documentation/*
+firmware/*
+linux/
+tools/*
+u-boot-arm/
+buildroot/*
+
+# Host OS related script
+service.sh
+
+# Build output
+build/output/*
+build/configs/buildroot/rootfs-overlay/lib/modules/*

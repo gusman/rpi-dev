@@ -1,0 +1,15 @@
+usb start
+setenv ipaddr 192.168.1.200
+setenv serverip 192.168.1.16
+setenv rootpath /srv/nfs4/rpi
+setenv fdtfile bcm2708-rpi-b-plus.dtb
+setenv kernel_file kernel-zImage
+setenv gatewayip 192.168.1.1
+setenv netmask 255.255.255.0
+setenv hostname rpi
+setenv bootargs earlyprintk console=ttyAMA0 
+setenv bootargs ${bootargs} root=/dev/nfs rw nfsroot=${serverip}:${rootpath} 
+setenv bootargs ${bootargs} ip=${ipaddr}:${serverip}:${gatewayip}:${netmask}:${hostname}::off 
+tftp ${kernel_addr_r} ${kernel_file}
+tftp ${fdt_addr_r} ${fdtfile}
+bootz ${kernel_addr_r} - ${fdt_addr_r}

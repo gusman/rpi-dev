@@ -1,0 +1,16 @@
+Wifi references:
+http://raspberrypihq.com/how-to-add-wifi-to-the-raspberry-pi/
+http://www.scienceprog.com/time-to-make-raspberry-pi-go-wireless/
+
+Minicom references:
+- Ctrl - A - Z, make sure hardware control = no
+
+Create buildroot rootfs-overlay:
+- make br-menuconfig
+- input in system config rootfs-overlay : $(BR_ROOTFS_OVERLAY_DIR)
+
+transmission-torrent:
+- http://www.webupd8.org/2009/12/setting-up-transmission-remote-gui-in.html
+
+Wifi Dongle power management issue:
+- https://www.raspberrypi.org/forums/viewtopic.php?t=61665
